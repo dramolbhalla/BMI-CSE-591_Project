@@ -1,0 +1,4 @@
+MATLAB Notes
+
+	Indexing for accessing descriptor values in MATLAB starts at (y=0, x=0)
+	and goes to (y=HEIGHT - 1, x=WIDTH - 1)
