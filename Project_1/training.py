@@ -23,7 +23,7 @@ def addNewFeature(image):
         featurePoints.close()
 
 
-def training(argv):
+def training(argv=None):
     Status = -1
 
     if((len(argv) > 1) and (argv[1] == '-h')):    #print the usage
@@ -39,7 +39,6 @@ def training(argv):
 
     else:                   #Case 2: selecing all images in the 'training_images' directory to use for training
         images = os.listdir(r'./training_images')
-        print images
         for image in images:
             image = r'./training_images/' + image
             Status = call(['matlab','-nosplash','-nodesktop','-r','training(\'%s\')'%(str(image))])
